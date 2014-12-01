@@ -1,0 +1,551 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html xmlns:fb="http://www.facebook.com/2008/fbml">
+	<head>
+		<meta charset="utf-8"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>	
+		<link type="text/css" href="/common/reset_v2.css.php" rel="stylesheet" />
+		<link type="text/css" href="/common/globalstyle_v2.css.php" rel="stylesheet" />
+						<link href='http://fonts.googleapis.com/css?family=Asap:400,400italic,700' rel='stylesheet' type='text/css'>	
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <script src="/common/ejs.min.js"></script>
+		<script language="javascript" src="/common/cookies.js"></script>
+				
+
+                        
+		<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->		
+
+		
+		<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js">
+</script>
+<script type="text/javascript">
+  GS_googleAddAdSenseService("ca-pub-5987080337074990");
+  GS_googleEnableAllServices();
+</script>
+<script type="text/javascript">
+GA_googleAddSlot("ca-pub-5987080337074990", "Stats_Hockey_Am_Right");
+GA_googleAddSlot("ca-pub-5987080337074990", "Stats_Hockey_Am_Top");
+GA_googleAddSlot("ca-pub-5987080337074990", "Stats_ROS_Button_Left");
+GA_googleAddSlot("ca-pub-5987080337074990", "Stats_ROS_PopUnder");
+
+</script>
+<script type="text/javascript">
+  GA_googleFetchAds();
+</script>
+
+<script type="text/javascript">
+  				GA_googleFillSlot("Stats_ROS_PopUnder");
+			</script>	<title>Lodos - South Suburban Adult Hockey League -  team schedule | Pointstreak Sports Technologies</title>
+<META NAME="Title" CONTENT="Lodos - South Suburban Adult Hockey League -  team schedule | Pointstreak Sports Technologies" />
+<meta name="description" content="Pointstreak Sport Technologies is the market leader in Real-time Statistics and Sports League Management Systems." />
+<meta name="keywords" content="Hockey, Lacrosse, Baseball, Soccer, Sports, League Management, Real-time Statistics, Web Design, Online Registration" />
+<LINK REL="SHORTCUT ICON" HREF="http://www.pointstreak.com/favicon.ico" />
+
+<script language="javascript" src="/common/cookies.js"></script>
+
+	<meta property="fb:page_id" content="8409273461" />
+    <meta property="og:title" content="Lodos - South Suburban Adult Hockey League -  on Pointstreak Sports Technologies"/> 
+	<meta property="og:type" content="sport"/> 
+	<meta property="og:url" content="http://www.pointstreak.com/players/players-team-schedule.html?teamid=525046"/>
+			<meta property="og:image" content="http://pointstreak.com/images/iconfacebook.jpg" />
+		<meta property="og:site_name" content="Pointstreak Sports Technologies"/> 
+	<meta property="og:description" content="Pointstreak Sports Technologies"/> 
+	<meta property="fb:app_id" content="151647281512717"/> 
+	<meta property="fb:admins" content="151647281512717"/>
+	
+	
+		<link type="text/css" href="/common/stylesheetplayers_v2.css.php" rel="stylesheet" />
+
+
+
+<script type="text/javascript">
+	<!--
+	if (self != top)
+	{
+	   if (document.images)
+	      top.location.replace(window.location.href);
+	   else
+	      top.location.href = window.location.href;
+	}
+	// -->
+</script>
+<script type="text/javascript">
+
+
+
+
+</script>
+
+<link type="text/css" href="/common/jquery-ui-1.7.1.custom.css.php" rel="stylesheet" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+<script type="text/javascript" src="/common/jquery-ui-1.8.16.custom.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/common/jcarousel.basic.css">
+<script type="text/javascript" src="/common/jquery.jcarousel.min.js"></script>
+
+<!-- script for lead tracking marketing - added 4/2/2014 -->
+<script async type='text/javascript' src='//cdn.bizible.com/_biz-a.js' ></script>
+<style type="text/css">
+<!--
+-->
+</style>
+
+
+</head>
+<body id="ps_com">
+
+<script>
+
+(function($) {
+    
+    $(document).ready(function(){
+        
+                
+    	$.ajax({
+    		type: "GET",
+    		url: "/ajax/trending_ajax.html",
+    		data: 'action=divisionscoreboard&divisionid=75330&seasonid=13420',
+    		dataType: 'json',
+    		success: function (json) {
+                $('#sb').html(new EJS({url: '/ejs/league_scoreboard.ejs'}).render({scoreboard:json.games_list,leagueshortname:json.leagueshortname,showleaguename:json.showleaguename}));
+    
+                $('.jcarousel').jcarousel({
+                    'wrap': 'circular'
+                });          
+                $('.jcarousel-control-prev').jcarouselControl({
+                    target: '-=8'
+                });
+                $('.jcarousel-control-next').jcarouselControl({
+                    target: '+=8'
+                });
+    		},
+    		failure: function(data) {
+    			console.log("failed to get trending data");
+    		}
+    	});    
+         
+                
+        $('#main > ul li a').removeClass('active');
+        $('#main > ul li a').eq(2).addClass('active');
+        
+    });
+    
+    function validateSearchForm() {
+    	
+    	searchtext = $('#search').val();
+    	
+    	if (searchtext.length < 3) {
+    		alert('The search text must be at least 3 characters long.');
+    		return false;
+    	} 
+    
+    }    
+        
+    
+    
+})(jQuery);
+
+    
+</script>
+
+<a name="top"> </a>
+	
+		<!-- Include main nav bar -->
+		
+		<header id="global">
+			<div class="wrap">
+				<h1 id="logo" class="left"><a href="#">Pointstreak.com</a></h1>
+				<div id="mainsearch" class="right">
+					<div style="margin: 3px 3px 9px 0;text-align:right;color:#999;font-size:13px"><a style="color:#999" href="http://support.pointstreaksites.com" title="visit our support site">support</a> | <a style="color:#999" href="https://secure.pointstreak.com/admin/">admin login</a></div>
+                    <form style="margin:0px; border:0;" action="http://www.pointstreak.com/search/index.html" method="GET" onsubmit="return validateSearchForm();">
+					<input type="text" class="searchbox" name="search" value="Search Leagues/Teams" onfocus="this.value=''" />
+                    </form>
+				</div>
+                
+				<div class="clear"></div>
+                
+				<nav id="main">
+					<ul>
+						<li><a href="http://www.pointstreak.com/">Home</a></li>
+						<li><a href="http://www.pointstreak.com/news_listings.html">News</a></li>
+						<li><a href="http://www.pointstreak.com/hockey">Hockey</a></li>
+						<li><a href="http://www.pointstreak.com/baseball/">Baseball</a></li>
+						<li><a href="http://www.pointstreak.com/baseball/index_softball.html">Softball</a></li>
+						<li><a href="http://www.pointstreak.com/basketball">Basketball</a></li>
+						<li><a href="http://www.pointstreak.com/lacrosse">Lacrosse</a></li>
+						<li><a href="http://www.pointstreak.com/soccer">Soccer</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</header><!-- End Header -->	
+
+		<!-- Scoreboard -->
+					<div class="scoreboard_container">
+									
+					 <div id="sb"></div>
+					 
+								</div>
+		<div id="statscontainer"><div style='padding:8px;text-align:center;'><script type="text/javascript">
+  GA_googleFillSlot("Stats_Hockey_Am_Top");
+</script></div><table id="ps_stats_main_table" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td valign="top" class="ps-stats-menu-cell">
+
+		<div class="logo"><a href="http://www.sspr.org" target="_blank"><img src="/logos/league488.gif" width="110" height="110" border="0"></a></div>				
+							<img src="/images/playersection/menu/teammenu.gif">
+						<table id="ps-stats-menu" border="0" cellpadding="2" cellspacing="1">
+			<tr>
+			<td  class="sideMenu"> 
+					 <img src="/images/playersection/menuarrow.gif"> <a href="players-team.html?teamid=525046&seasonid=13420">TEAM HOME</a>			</td>
+			</tr><tr><td class="sideMenu"> 
+					<img src="/images/playersection/menuarrow.gif"> <a href="players-team-roster.html?teamid=525046&seasonid=13420">PLAYER STATS</a></td>
+			</tr>
+			</tr><tr>
+					<td class="sideMenu"> 
+						<img src="/images/playersection/menuarrow.gif"> <a href="players-team-records.html?teamid=525046&seasonid=13420">RECORDS</a></td>
+				</tr>			<tr>
+			<td class="sideMenuHighlight">
+					<img src="/images/playersection/menuarrow.gif"> <a href="players-team-schedule.html?teamid=525046&seasonid=13420">SCHEDULE</a></td>
+			</tr>
+						<tr>
+				<td class="sideMenu">
+					<img src="/images/playersection/menuarrow.gif"> <a href="http://www.teamlockerroom.com">LOCKER ROOM</a></td>
+			</tr>
+									</table>
+							<img src="/images/playersection/menu/divisionmenu.gif">
+								
+					<table id="ps-stats-menu" border="0" cellpadding="2" cellspacing="1">
+					<tr>
+					<td class="sideMenu"> 
+							<img src="/images/playersection/menuarrow.gif"> <a href="players-division.html?divisionid=75330&seasonid=13420">SCOREBOARD</a>							</td>
+					</tr>
+					<tr>
+					<td class="sideMenu"> 
+							<img src="/images/playersection/menuarrow.gif"> <a href="players-division-standings.html?divisionid=75330&seasonid=13420">STANDINGS</a></td>
+					</tr>
+					<tr>
+							<td class="sideMenu">
+							<img src="/images/playersection/menuarrow.gif"> <a href="players-division-leaders.html?divisionid=75330&seasonid=13420">SCORING LEADERS</a>							</td>
+						</tr>
+						<tr>
+							<td class="sideMenu">
+							<img src="/images/playersection/menuarrow.gif"> <a href="players-division-goalies.html?divisionid=75330&seasonid=13420">GOALIE LEADERS</a>							</td>
+						</tr><tr>
+							<td class="sideMenu">
+							<img src="/images/playersection/menuarrow.gif"> <a href="players-division-records.html?divisionid=75330&seasonid=13420">RECORDS</a>							</td>
+						</tr>                    <tr>
+						<td class="sideMenu"><img src="/images/playersection/menuarrow.gif"> <a href="players-division-schedule.html?divisionid=75330&seasonid=13420">SCHEDULE</a>						</td>
+					</tr>
+                    			 </table>
+							
+									<img src="/images/playersection/menu/leaguemenu.gif">
+								
+				
+				
+				
+			
+			<table id="ps-stats-menu" border="0" cellpadding="2" cellspacing="1">
+			<tr>
+				<td class="sideMenu"> 
+					<img src="/images/playersection/menuarrow.gif"> <a href="players-leagues.html?leagueid=488&seasonid=13420">HOME</a>					</td>
+			</tr>
+			<tr>
+					<td class="sideMenu">
+					<img src="/images/playersection/menuarrow.gif"> <a href="players-leagues-scoreboard.html?leagueid=488&seasonid=13420">SCOREBOARD</a>					</td>
+			</tr>
+						<tr>
+					<td class="sideMenu">
+					<img src="/images/playersection/menuarrow.gif"> <a href="players-leagues-schedule.html?leagueid=488&seasonid=13420">SCHEDULE</a>					</td>
+			</tr>
+                        
+			<!--			<tr>
+					<td class="sideMenu">
+					<img src="/images/playersection/menuarrow.gif"> <a href="players-list.html?leagueid=488&seasonid=13420">PLAYERS</a>					</td>
+			</tr>-->
+							
+			</table>
+						 			
+			<div style="padding: 4px; BORDER-BOTTOM: #333333 1px solid; BORDER-LEFT: #999999 1px solid; BORDER-RIGHT: #333333 1px solid; BORDER-TOP: #999999 1px solid; width: 120px;">For all stats related problems including player names and game events contact<br><br>&#149;<a href="mailto:PeterH@sspr.org"> <b>South Suburban Adult Hockey League</b></a><br>303-754-0563</div>		
+		<div style='padding:4px;text-align:center;'><script type="text/javascript">
+  GA_googleFillSlot("Stats_ROS_Button_Left");
+</script></div>	
+ 
+			</td>
+	<td width="*" valign="top" id="ps-main-stats-cell">
+
+
+<div align="left" style="padding: 2px 0px;float:left;height: 25px; margin: auto; position: relative">
+	<form style="margin:0;" action="teamplayer_search.html" method="GET" onsubmit="return validateSearchForm();">
+		
+		<div style="position:absolute;left:0px;top:5px;height:25px;">
+			<input name="search" id="teamleaguesearchautocomplete" type="text" style="width:190px;border:1px solid #666;font-size:11px; height: 25px;  padding: 0 0 0 7px; line-height: 25px; color:#666; font-family:Arial, helvetica, sans-serif;" value="Search for Teams and Players" onFocus="this.value=''" size="32">
+			<input type="hidden" name="leagueid" value="488" />
+		</div>
+		
+		<div style="position:absolute;left:198px;top:0px;height:25px;">
+			<input name="image" style="margin-top:5px" type="image" id="search_button_global" value="submit" src="/images/globalsearchbutton.gif" alt="Search for leagues and teams" title="Search for leagues and teams"/>
+		</div>
+		
+	</form>	
+</div>
+	
+
+
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<div align="right" style="
+	padding: 0px;
+	float:right;
+	width:110px; 
+	height: 25px; 
+	margin: 5px 20px 12px 0;
+">
+	<!-- add facebook thumb URL -->
+	<link rel="image_src" href="http://www.pointstreak.com/logos/league65.gif" />
+	<!-- AddThis Button BEGIN -->
+	<div class="addthis_toolbox addthis_default_style " 
+	style="background-image:url(/images/bg_vidclip.jpg); 
+	background-repeat:repeat-x; float:right;width:110px; border:1px solid #cccccc; padding:2px; -moz-border-radius: 5px; border-radius: 5px;" 
+	addthis:title="Check out this link on #Pointstreak - Lodos - South Suburban Adult Hockey League - "
+	addthis:description="Check out this link on #Pointstreak - Lodos - South Suburban Adult Hockey League - "> 					 
+		<a class="addthis_button_facebook"></a>
+		<a class="addthis_button_email"></a>
+		<a class="addthis_button_twitter"></a>
+		<img src="/images/share.jpg" alt="use the links to the left to share this">	
+		
+	</div>
+	<script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4d8a33f53250054a"></script>
+	<!-- AddThis Button END -->
+</div>
+<div style="padding: 0px; width:33px; height: 25px; margin: 5px 0px 12px 0; float:right;">
+	<g:plusone size="small" count="false"></g:plusone>
+</div>
+<br><br>	<table width="97%" border="0" cellspacing="0" cellpadding="4">
+			<tr class="cellHeaderTeam">			<td width="60%"><h1>SSAHL (Fall/Winter 2014/15)</h1></td>
+			<td width="40%" align="right">&nbsp;</td>
+			</tr>
+				<tr class="pageSubHeader">
+			<td width="60%"><h2>
+			Lodos (D3 South)			</h2></td>
+			<td width="40%" align="right"><script language="javascript">
+function loadOtherTeams(form)
+{
+	team = form.selectedIndex;
+	teamid = form.options[team].value;
+	window.location='?teamid=' + eval(teamid) + '&seasonid=13420 ';     
+}
+</script>
+
+<form method="post" action="" style="margin:0;">
+<select name="otherDivsionsMenu" onChange="loadOtherTeams(this)">
+<option>- view another team -</option>
+<option value=464627>El Chupacabra</option><option value=250670>Gilmore  Red Lions D3</option><option value=312787>Ice Sharks</option><option value=526266>Iceaholics</option><option value=156838>Lone Rangers</option><option value=525045>Wolverines</option><option value=250489>Zamboloni</option></select>
+</form>			
+			</td>
+		</tr>
+		</table>
+<br>
+        <table width="97%" border="0" cellspacing="0" cellpadding="3">
+          <tr class="cellTeamPlayer"> 
+            <td>&nbsp; Team Schedule</td>	            <td width="60%" align="right"> gamesheet view&nbsp;<img src="/images/playersection/gs.gif" width="15" height="15" border="0" align="absmiddle">&nbsp;&nbsp;&nbsp; printable gamesheett <img src="/images/playersection/ss.gif" width="15" height="15" border="0" align="absmiddle"></td>          </tr>
+          </table>
+			<table width="97%" border="0" cellspacing="1" cellpadding="3">
+					<tr class="fields">
+											<td width="23%" align="left"> Home</td>
+						<td width="23%" align="left"> Away</td>
+						<td width="17%"> Date</td>
+						<td width="13%"> Time</td>
+						<td nowrap align="right" width="21%"> Rink/ GS</td>
+						<td width="2%"> GT</td>
+					</tr>				<tr class="lightGrey">
+											<td><a href="players-team.html?teamid=525046&seasonid=13420">Lodos</a><b> 9</b></td><td><a href="players-team.html?teamid=525045&seasonid=13420">Wolverines</a><b> 1</b>						</td>
+						<td align="center">Sun, Oct 05 </td>
+						<td>5:00 pm</td>
+						<td align="right"><a href="players-boxscore.html?gameid=2539270">final</a>	 <a href="gamesheet_full.html?gameid=2539270" target="_blank"><img src="/images/playersection/gs.gif" width="15" height="15" border="0" align="absmiddle"></a></td>
+						<td><img src="/images/playersection/icon_terminal.gif" border="0"></td>
+					</tr>
+								<tr class="lightGrey">
+											<td><a href="players-team.html?teamid=526266&seasonid=13420">Iceaholics</a><b> 3</b></td><td><a href="players-team.html?teamid=525046&seasonid=13420">Lodos</a><b> 7</b>						</td>
+						<td align="center">Sat, Oct 11 </td>
+						<td>9:14 pm</td>
+						<td align="right"><a href="players-boxscore.html?gameid=2540220">final</a>	 <a href="gamesheet_full.html?gameid=2540220" target="_blank"><img src="/images/playersection/gs.gif" width="15" height="15" border="0" align="absmiddle"></a></td>
+						<td><img src="/images/playersection/icon_terminal.gif" border="0"></td>
+					</tr>
+								<tr class="lightGrey">
+											<td><a href="players-team.html?teamid=525046&seasonid=13420">Lodos</a><b> 4</b></td><td><a href="players-team.html?teamid=312787&seasonid=13420">Ice Sharks</a><b> 3</b>						</td>
+						<td align="center">Fri, Oct 17 </td>
+						<td>9:50 pm</td>
+						<td align="right"><a href="players-boxscore.html?gameid=2554259">final</a>	 <b>SO</b> <a href="gamesheet_full.html?gameid=2554259" target="_blank"><img src="/images/playersection/gs.gif" width="15" height="15" border="0" align="absmiddle"></a></td>
+						<td><img src="/images/playersection/icon_manual.gif" border="0"></td>
+					</tr>
+								<tr class="lightGrey">
+											<td><a href="players-team.html?teamid=525046&seasonid=13420">Lodos</a><b> 1</b></td><td><a href="players-team.html?teamid=250670&seasonid=13420">Gilmore  Red Lions D3</a><b> 2</b>						</td>
+						<td align="center">Sun, Oct 26 </td>
+						<td>7:21 pm</td>
+						<td align="right"><a href="players-boxscore.html?gameid=2554264">final</a>	 <a href="gamesheet_full.html?gameid=2554264" target="_blank"><img src="/images/playersection/gs.gif" width="15" height="15" border="0" align="absmiddle"></a></td>
+						<td><img src="/images/playersection/icon_terminal.gif" border="0"></td>
+					</tr>
+								<tr class="lightGrey">
+											<td><a href="players-team.html?teamid=464627&seasonid=13420">El Chupacabra</a><b> 4</b></td><td><a href="players-team.html?teamid=525046&seasonid=13420">Lodos</a><b> 3</b>						</td>
+						<td align="center">Sun, Nov 02 </td>
+						<td>2:35 pm</td>
+						<td align="right"><a href="players-boxscore.html?gameid=2563937">final</a>	 <b>SO</b> <a href="gamesheet_full.html?gameid=2563937" target="_blank"><img src="/images/playersection/gs.gif" width="15" height="15" border="0" align="absmiddle"></a></td>
+						<td><img src="/images/playersection/icon_terminal.gif" border="0"></td>
+					</tr>
+								<tr class="lightGrey">
+											<td><a href="players-team.html?teamid=525046&seasonid=13420">Lodos</a><b> 5</b></td><td><a href="players-team.html?teamid=156838&seasonid=13420">Lone Rangers</a><b> 3</b>						</td>
+						<td align="center">Sat, Nov 08 </td>
+						<td>8:25 pm</td>
+						<td align="right"><a href="players-boxscore.html?gameid=2564307">final</a>	 <a href="gamesheet_full.html?gameid=2564307" target="_blank"><img src="/images/playersection/gs.gif" width="15" height="15" border="0" align="absmiddle"></a></td>
+						<td><img src="/images/playersection/icon_terminal.gif" border="0"></td>
+					</tr>
+								<tr class="lightGrey">
+											<td><a href="players-team.html?teamid=250489&seasonid=13420">Zamboloni</a><b> 5</b></td><td><a href="players-team.html?teamid=525046&seasonid=13420">Lodos</a><b> 4</b>						</td>
+						<td align="center">Sun, Nov 16 </td>
+						<td>1:10 pm</td>
+						<td align="right"><a href="players-boxscore.html?gameid=2576211">final</a>	 <a href="gamesheet_full.html?gameid=2576211" target="_blank"><img src="/images/playersection/gs.gif" width="15" height="15" border="0" align="absmiddle"></a></td>
+						<td><img src="/images/playersection/icon_manual.gif" border="0"></td>
+					</tr>
+								<tr class="lightGrey">
+											<td><a href="players-team.html?teamid=525045&seasonid=13420">Wolverines</a><b> 2</b></td><td><a href="players-team.html?teamid=525046&seasonid=13420">Lodos</a><b> 4</b>						</td>
+						<td align="center">Sat, Nov 22 </td>
+						<td>8:54 pm</td>
+						<td align="right"><a href="players-boxscore.html?gameid=2576217">final</a>	 <a href="gamesheet_full.html?gameid=2576217" target="_blank"><img src="/images/playersection/gs.gif" width="15" height="15" border="0" align="absmiddle"></a></td>
+						<td><img src="/images/playersection/icon_terminal.gif" border="0"></td>
+					</tr>
+				<tr><td><span class="highlight"></span><a href="players-team.html?teamid=525046&seasonid=13420">Lodos</a></td>
+							<td><span class="highlight"></span><a href="players-team.html?teamid=526266&seasonid=13420">Iceaholics</a></td>
+							<td align="center">Sat, Dec 06</td><td>9:50 pm</td>
+							<td align="right"><a href="players-arenas.html?arenaid=1024&seasonid=13420">FS Avalanche</a> <a href="gamesheet.html?gameid=2576220" target="_blank"><img src="/images/playersection/ss.gif" width="15" height="15" border="0" align="absmiddle"></a>							</td>
+							<td><img src="/images/playersection/icon_terminal.gif" border="0"></td>
+						</tr>				<tr>
+				<td align="right" colspan="6"><br><a href="../aboutus/pointstreakis-entrytype.html">Terminal Game/Rink - <img src="/images/playersection/icon_terminal.gif" align="absmiddle" border=0></a><br><a href="../aboutus/pointstreakis-entrytype.html">Laptop Game/Rink - <img src="/images/playersection/icon_laptop.gif" align="absmiddle" border=0></a><br><a href="../aboutus/pointstreakis-entrytype.html">Online Entry Game/Rink - <img src="/images/playersection/icon_manual.gif" align="absmiddle" border=0></a></td>
+		 		</tr>
+		</table>
+      <br>
+      <br>
+
+<div align="left">&nbsp;&nbsp;&nbsp;<b><img src="/images/playersection/printmini.gif"> <a href="print/players-team-schedule.html?teamid=525046">print this page</a> | <a href="printteamroster.html?teamid=525046" target="_blank">print team roster</a></b></div>	<!-- END__CONTENT -->
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	  <tr>
+	  <td align="right">
+		  		  <a href="http://www.pointstreaksolutions.com/view/solutions/pointstreak-stats-1" target="_blank"><img src="/images/playersection/statspoweredby.gif" border="0"></a> 
+		  		</td>
+	  </tr>
+	  </table>
+	 <table width="100%" border="0" cellpadding="0" cellspacing="0">
+	  <tr> 
+		<td width="600" align="left"><a href="http://www.pointstreak.com/aboutus/services-referral.html" target="_blank"><img src="/images/playersection/referrals-link.gif" border="0"></a><br>		  <a href="javascript:void(0)" onMouseOver="status='Additional info in pop-up window ...' ; return true" onMouseOut="status=' '" onClick="window.open('/common/mail.html?page=/players/players-team-schedule.html?teamid=525046', 'popupwin', 'width=342,height=325,resizable')"><img src="/images/playersection/email-link.gif" border="0"></a> 
+		  		</td></tr>
+	</table>
+
+</td>
+<td valign="top" width="120"><script type="text/javascript">
+  GA_googleFillSlot("Stats_Hockey_Am_Right");
+</script></td></tr>
+</table>
+
+﻿
+</div><!-- End Container -->
+		
+		<footer style="background-color: #000;">
+			<div class="wrap">
+				<div class="column">
+					<ul>
+						<li><h5>Products by Category</h5></li>
+						<li><a href="http://www.pointstreaksolutions.com/sports-statistics-software">Statistics Software</a></li>
+						<li><a href="http://www.pointstreaksolutions.com/sports-registration-software">Registration Software</a></li>
+						<li><a href="http://www.pointstreaksolutions.com/sports-websites-design">Sports Websites Software</a></li>
+						<li><a href="http://www.pointstreaksolutions.com/live-video-highlights-software">Live Video Highlights</a></li>
+						<li><a href="http://www.pointstreaksolutions.com/sports-apps-development">Mobile Apps Development</a></li>
+						<li><a href="http://www.pointstreaksolutions.com/video-coaching-tools">Video Coaching Tools</a></li>
+						<li><a href="http://fifty.pointstreak.com">Raffle Management</a></li>
+						<li><a href="http://www.pointstreaksolutions.com/sports-recruiting-services">Recruiting Services</a></li>
+						<li><a href="http://www.pointstreaksolutions.com/best-sports-live-streaming-service/">Live Video Streaming</a></li>
+					</ul>
+				</div>
+				<div class="column">
+					<ul>
+						<li><h5>Products by Sport</h5></li>
+						<li><a href="http://www.pointstreaksolutions.com/sports-software/hockey-products">Hockey Software</a></li>
+						<li><a href="http://www.pointstreaksolutions.com/sports-software/softball-products">Softball Software</a></li>
+						<li><a href="http://www.pointstreaksolutions.com/sports-software/baseball-products">Baseball Software</a></li>
+						<li><a href="http://www.pointstreaksolutions.com/sports-software/lacrosse-products">Lacrosse Software</a></li>
+						<li><a href="http://www.pointstreaksolutions.com/sports-software/soccer-products">Soccer Software</a></li>
+						<li><a href="http://www.pointstreaksolutions.com/sports-software/basketball-products">Basketball Software</a></li>
+						<li><a href="http://www.pointstreaksolutions.com/sports-software/other-sport-products">Other sports</a></li>
+					</ul>
+				</div>
+				<div class="column">
+					<ul>
+						<li><h5>Company</h5></li>
+						<li><a href="http://company.pointstreak.com">Company Info</a></li>
+						<li><a href="http://company.pointstreak.com/careers.html">Careers</a></li>
+						<li><a href="http://company.pointstreak.com/news.html">News</a></li>
+						<li><a href="http://company.pointstreak.com/advertising.html">Advertise</a></li>
+						<li><a href="http://company.pointstreak.com/contactus.html">Contact</a></li>
+						<li><a href="http://support.pointstreaksites.com">Support</a></li>
+					</ul>
+				</div>
+				<div class="column">
+					<small class="copyright">&copy; 2014 Pointstreak Sports Technologies Inc.</small>
+					<ul class="social_media">
+						<li><a href="http://www.pointstreak.com/youtube"><img src="/images/v2/icon_youtube.jpg" alt="Subscribe on Youtube" /></a></li>
+						<li><a href="http://www.pointstreak.com/linkedin"><img src="/images/v2/icon_linkedin.jpg" alt="Follow on LinkedIn" /></a></li>
+						<li><a href="http://www.pointstreak.com/twitter"><img src="/images/v2/icon_twitter.jpg" alt="Follow us on Twitter" /></a></li>
+						<li><a href="http://www.pointstreak.com/facebook"><img src="/images/v2/icon_facebook.jpg" alt="Like us on Facebook" /></a></li>
+					</ul>
+				</div>
+			</div>
+		</footer><!-- End Footer -->
+			<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-2592979-1']);
+			_gaq.push(['_trackPageview']);
+
+			_gaq.push(['_setAccount', 'UA-2592979-21']);
+			_gaq.push(['_trackPageview']);
+		
+		
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+
+	
+		
+
+<!-- Begin comScore Tag -->
+<script>
+	var _comscore = _comscore || [];
+	_comscore.push(
+	{ c1: "2", c2: "6036084" }
+	);
+	(function()
+	{ var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true; s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; el.parentNode.insertBefore(s, el); }
+	)();
+</script>
+<noscript>
+	<img src="http://b.scorecardresearch.com/p?c1=2&c2=6036084&cv=2.0&cj=1" />
+</noscript>
+<!-- End comScore Tag -->
+	
+	
+		</body>
+
+</html>
+	
+
+	
+
+
+
+
+
