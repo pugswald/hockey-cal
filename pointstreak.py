@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 import cgi
 from datetime import datetime, timedelta
 from icalendar import Calendar, Event, Alarm
@@ -7,8 +7,8 @@ import requests
 import sys
 
 ### TODO: Remove after debugging complete
-import cgitb
-cgitb.enable()
+#import cgitb
+#cgitb.enable()
 ###
 
 
@@ -28,8 +28,7 @@ def html_to_ical(html_string):
     # Get home v away, date, time, rink
     now = datetime.now()
     calendar = Calendar()
-    calendar.add('x-wr-calname','Schedule for {}'.format(team))
-    events = []
+    calendar.add('x-wr-calname','Schedule for %s'%(team))
     for row in schedule_table.iter('tr'):
         try:
             #print etree.tostring(row)
@@ -40,8 +39,8 @@ def html_to_ical(html_string):
             rink = rink.strip()
             home = row[0].text_content()
             away = row[1].text_content()
-            date_str = '{} {} {}'.format(row[2].text_content(), row[3].text_content(),
-                                            now.year)
+            date_str = ' '.join([row[2].text_content(), row[3].text_content(),
+                                str(now.year)])
             tstamp = datetime.strptime(date_str, "%a, %b %d %I:%M %p %Y")
             # For whatever reason, the year is never printed
             if tstamp < now:
@@ -50,7 +49,7 @@ def html_to_ical(html_string):
             event = Event()
             event.add('uid', uid)
             event.add('dtstart', tstamp)
-            event.add('summary', 'Hockey game {} vs {}'.format(home,away))
+            event.add('summary', 'Hockey game %s vs %s'%(home, away))
             event.add('dtend', tstamp + timedelta(minutes=90))
             event.add('location', rink)
             alarm = Alarm()
@@ -58,16 +57,9 @@ def html_to_ical(html_string):
             alarm.add('trigger', timedelta(minutes=-60))
             event.add_component(alarm)
             calendar.add_component(event)
-            events.append('{} vs {} at {} {}'.format(home, away, tstamp.isoformat(), 
-                                                     rink))
         except:
             #print sys.exc_info()
             pass # This block is not good data
-            
-    #print etree.tostring(schedule_table)
-    #print schedule_table[1].text_content()
-    #print events
-    #print calendar.to_ical()
     return calendar
     
 def get_html_schedule(url):
