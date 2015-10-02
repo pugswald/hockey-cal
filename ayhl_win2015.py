@@ -27,20 +27,11 @@ def process_xls(filename):
         evt_desc = None
         if row[0].value == "U8 Advanced":
             evt_desc = row[0].value
-        if row[1].value == "Group 1":
+        if row[1].value == "Group 1" or row[1].value == "Group 2":
             evt_desc = row[1].value
         if evt_desc is None:
             continue
         basedate = xlrd.xldate_as_tuple(row[3].value, wb.datemode)
-        """
-        (hh, mmxx) = row[4].value.split(':')
-        hh = int(hh)
-        mm = int(mmxx[:2])
-        xx = mmxx[2:]
-        if xx == 'PM': 
-            hh += 12
-        basedt = list(basedate[:3]) + [hh, mm]
-        """
         basedt = list(basedate[:3]) + get_hhmm(row[4].value)
         tstamp = datetime(*basedt)
         basedt_end = list(basedate[:3]) + get_hhmm(row[5].value)
